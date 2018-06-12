@@ -32,6 +32,7 @@ def _wrap_reader_for_text(fp, encoding):
 def _wrap_writer_for_text(fp, encoding):
     try:
         fp.write('')
+        print("hello python")
     except TypeError:
         fp = io.TextIOWrapper(fp, encoding)
     return fp
